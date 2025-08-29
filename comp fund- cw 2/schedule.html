@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- links the css stlyepage to this specific html page -->
+    <link rel="stylesheet" href="mystyle.css">
+    <title> Schedule </title>
+</head>
+<body>
+    <!-- displays the banner image defined in the css stylesheet -->
+    <div id="bannerimage"></div>
+<h1>Day Timings</h1>
+<!-- Navigation links -->
+    <ol>
+        <li><A HREF="index.html">Home Page</A></li> 
+        <li><A HREF="register.html">Register Here</A></li> 
+        <li><A HREF="schedule.html">Schedule</A></li>
+        <li><A HREF="speakers.html">Speakers</A></li>
+        <li><A HREF="contact.html">Contact Us</A></li>
+    </ol>
+<!-- allows input from user to search the table by dates  -->
+<input type="text" id="Input" onkeyup="myFunction()" placeholder="Search for Dates..">
+
+<table id="myTable">
+  <tr class="header">
+    <!--defines the column names for the table in order-->
+    <th style="width:60%;">Talk/Event</th>
+    <th style="width:60%;">Time</th>
+    <th style="width:40%;">Date</th>
+  </tr>
+  <tr>
+    <td>Welcome Talk</td>
+    <td>12:30 - 13:00</td>
+    <td>01/12/23</td>
+  </tr>
+  <tr>
+    <td>Panel Discussion: "Blockchain Revolution: Beyond Cryptocurrency"</td>
+    <td>13:00 - 14:30</td>
+    <td>01/12/23</td>
+  </tr>
+  <tr>
+    <td>Welcome Talk</td>
+    <td>12:30 - 13:00</td>
+    <td>08/12/23</td>
+  </tr>
+  <tr>
+    <td>Panel Discussion: "Blockchain Revolution: Beyond Cryptocurrency"</td>
+    <td>13:00 - 14:30</td>
+    <td>08/12/23</td>
+  </tr>
+  <tr>
+    <td>Welcome Talk</td>
+    <td>12:30 - 13:00</td>
+    <td>15/12/23</td>
+  </tr>
+  <tr>
+    <td>Panel Discussion: "Blockchain Revolution: Beyond Cryptocurrency"</td>
+    <td>13:00 - 14:30</td>
+    <td>15/12/23</td>
+  </tr>
+</table>
+
+
+<script>
+    // this function filters and display rows based on what the user inputs
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("Input");
+      filter = input.value;
+
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      //iterative loop through each row
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[2];
+
+        //checking if the celll is there
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.indexOf(filter) > -1) {
+            //if the inputs matches, the row is shown
+            tr[i].style.display = "";
+            //if there is no match, nothing is shown
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+    </script>
+</body>
+</html>

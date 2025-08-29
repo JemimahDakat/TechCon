@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<style>
+    input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: ridge;  
+  background: #c8c4c400;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: rgb(97, 97, 97);  
+  outline: none;  
+
+ 
+}  
+</style>
+<head>
+    <title> Registration Page</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+<div id="bannerimage"></div>
+<h1>Registration</h1>#
+<!-- Navigation links -->
+    <ol>
+        <li><A HREF="index.html">Home Page</A></li> 
+        <li><A HREF="register.html">Register Here</A></li> 
+        <li><A HREF="schedule.html">Schedule</A></li>
+        <li><A HREF="speakers.html">Speakers</A></li>
+        <li><A HREF="contact.html">Contact Us</A></li>
+    </ol>
+    <form>  
+        <label><h2>Please Enter your First Name </h2></label>         
+        <input type="text" name="firstname" size="15"/> <br><br>
+        <label><h2>Please Enter your Surname</h2></label>         
+        <input type="text" name="surname" size="15"/> <br><br>
+        <label><h2>Please Enter A Username</h2></label>         
+        <input type="text" name="username" size="15"/> <br><br>
+        <label><h2>Please Enter your password </h2></label>         
+        <input type="text" name="password" size="15"/> <br><br>
+        <label><h2>Please Re-Enter your password </h2></label>         
+        <input type="text" name="repassword" size="15"/> <br><br>
+
+        <label>   
+             <h2>Technology Sector:</h2>
+        </label>   
+            <select>  
+            <option value="Technology">Technology</option>  
+            <option value="Electronics">Electronics</option>  
+            <option value="Software">Software</option>  
+            <option value="Computers">Computers</option>  
+            <option value="Artifical intelligence">Artifical intelligence</option>  
+            <option value="Information Technology (IT)">Information Technology (IT)</option>
+            </select>  
+        <br><br>
+        <label>
+            <h2>Please select the date you would like to attend </h2>
+        </label>
+        
+        <input type="date" id="date  name="party" min="2023-12-01" max="2023-12-15" step="7"">
+
+        <input type="submit" value="Submit">
+        <br><br>
+        <br><br>
+        <br><br>
+</body>
+
+</html>
